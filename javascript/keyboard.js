@@ -175,5 +175,3 @@ const Keyboard = {
 window.addEventListener("DOMContentLoaded", function () {
     Keyboard.init();
 });
-//credit "dcode" on youtube
-//link "https://www.youtube.com/watch?v=N3cq0BHDMOY"
