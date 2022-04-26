@@ -1,0 +1,11 @@
+.backColor{
+    color: rgb(216, 216, 216);
+    background-color: rgb(216, 216, 216);;
+    border-radius: 20px;
+    width: auto;
+    padding: 50px;
+    margin: 20px;
+}
+.txt{
+    color: black;
+}
