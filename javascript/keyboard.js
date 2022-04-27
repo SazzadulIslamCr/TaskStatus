@@ -14,7 +14,7 @@ const Keyboard = {
         value: "",
         capsLock: false
     },
-
+    //this function runs when page loads up
     init() {
         // Create main elements
         this.elements.main = document.createElement("div");
@@ -40,14 +40,15 @@ const Keyboard = {
             });
         });
     },
-
+    //private method to create keys
     _createKeys() {
         const fragment = document.createDocumentFragment();
         const keyLayout = [
+            "done", "!", "@", "#", "$", "%", "(", ")", "-", "_", "/",
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "backspace",
             "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
             "caps", "a", "s", "d", "f", "g", "h", "j", "k", "l", "enter",
-            "done", "z", "x", "c", "v", "b", "n", "m", ",", ".", "?",
+            "z", "x", "c", "v", "b", "n", "m", ",", ".", "?",
             "space"
         ];
 
@@ -58,7 +59,7 @@ const Keyboard = {
 
         keyLayout.forEach(key => {
             const keyElement = document.createElement("button");
-            const insertLineBreak = ["backspace", "p", "enter", "?"].indexOf(key) !== -1;
+            const insertLineBreak = ["/","backspace", "p", "enter", "?"].indexOf(key) !== -1;
 
             // Add attributes/classes
             keyElement.setAttribute("type", "button");
@@ -111,7 +112,7 @@ const Keyboard = {
 
                 case "done":
                     keyElement.classList.add("keyboard__key--wide", "keyboard__key--dark");
-                    keyElement.innerHTML = createIconHTML("check_circle");
+                    keyElement.innerHTML = "esc";
 
                     keyElement.addEventListener("click", () => {
                         this.close();
@@ -142,6 +143,7 @@ const Keyboard = {
     },
 
     _triggerEvent(handlerName) {
+        //console.log("event name"+handlerName);
         if (typeof this.eventHandlers[handlerName] == "function") {
             this.eventHandlers[handlerName](this.properties.value);
         }
