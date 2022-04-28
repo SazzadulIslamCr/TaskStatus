@@ -9,4 +9,10 @@
 .txt{
     color: black;
 }
+.custom_card{
+    padding: 50px;
+    margin: 20px;
+    width: auto;
+    border-radius: 20px;
+}
 

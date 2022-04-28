@@ -11,7 +11,7 @@
     <title>Task Status</title>
 </head>
 <body>
-    <form class="backColor">
+    <form class="backColor" id="form">
         <h1 class="txt">Add New Item:</h1>
         <br>
         <div class="form-group">
@@ -35,7 +35,21 @@
         </div>
     </form>
 
-    <div id="output"></div>
+
+    <!--<div class="card custom_card" id="dataCard">
+        <div class="card-body">
+          <span>Unique ID:</span>
+          <h6 id="id" style="text-align:right; bottom: 10px"></h6>
+          <h6>Close/Open</h6>
+          <h3 class="card-title" id="description"></h3>
+          <p class="card-text" id="sevShow"></p>
+          <p class="card-text" id="asShow"></p>
+          <input class="btn btn-warning" type="button" name="close" id="closeBtn" value="Close">
+          <input class="btn btn-danger" style="margin-left: 1em;"type="button" name="close" id="closeBtn" value="Delete">
+        </div>
+    </div>-->
+
+    <h4 id="showData"></h4>
 
     
     <!-- JavaScritps -->
